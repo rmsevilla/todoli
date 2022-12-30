@@ -1,10 +1,14 @@
+import Card from './Card';
 import './CreateList.css';
 import CreateListHeader from './CreateListHeader';
 
 function CreateList(){
 
     return(
-        <CreateListHeader></CreateListHeader>
+        <div>
+            <CreateListHeader></CreateListHeader>
+            <Card></Card>
+        </div>
     )
 }
 

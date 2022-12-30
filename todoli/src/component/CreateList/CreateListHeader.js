@@ -1,10 +1,16 @@
 import './CreateListHeader.css';
 
 function CreateListHeader(){
+
+    //implement an onclick for the button, to bring up the catergory 
+    //selection
+
     return(
-        <div className="header">
+        <div className = "top">
             <h1>Create a new List</h1>
-            <button > The Button</button>
+            <div className = "button-right"> 
+                <button > The Button</button>
+            </div>
         </div>
     )
 }
