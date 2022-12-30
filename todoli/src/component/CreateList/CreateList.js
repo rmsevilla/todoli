@@ -1,8 +1,10 @@
 import './CreateList.css';
+import CreateListHeader from './CreateListHeader';
 
 function CreateList(){
+
     return(
-        <div></div>
+        <CreateListHeader></CreateListHeader>
     )
 }
 
