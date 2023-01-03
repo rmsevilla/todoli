@@ -1,22 +1,9 @@
-
-//normal boostrap not wokring for now
-//either make own card, or try react-boostrap
-// function Card(){
-//     return(
-//         <div className="card">
-//             <div className="card-body">
-//                 <h5 className="card-title">Card title</h5>
-//                 <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-//             </div>
-//         </div>
-//     )
-// }
-
-// export default Card;
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
 function OurCard(props) {
+  //need Card img, for thumbnail
+  //write go somewhere button to route to list Content
   return (
     <Card style={{ width: '18rem' }}>
       <Card.Body>
@@ -27,5 +14,7 @@ function OurCard(props) {
     </Card>
   );
 }
+
+//<Route element = {<ListContent content = "grocery">}
 
 export default OurCard;
