@@ -1,6 +1,10 @@
 import OurCard from './Card';
 import './CreateList.css';
 import CreateListHeader from './CreateListHeader';
+import grocery from '../../image/grocery.jpg';
+import chore from '../../image/chore.jpg';
+import homework from '../../image/assignment.jpg';
+import other from '../../image/other.jpg';
 
 function CreateList(){
     //put url for card thumbnail, and implement on click of the card
@@ -9,9 +13,10 @@ function CreateList(){
         <div>
             <CreateListHeader></CreateListHeader>
             <div className='card-list-container'>
-                <OurCard title="1" text="i like to sleep"></OurCard>
-                <OurCard title="2" text="i like to eat"></OurCard>
-                <OurCard title="3" text="i like to game"></OurCard>
+                <OurCard title="Grocery List" text="Buying Grocery" image = {grocery}></OurCard>
+                <OurCard title="Chore To Do" text="Got Chore To Do" image = {chore}></OurCard>
+                <OurCard title="Assignment To Do" text="Going To Do Homework" image = {homework}></OurCard>
+                <OurCard title = "Other" text="Other Stuff" image = {other}></OurCard>
             </div>
         </div>
     )
