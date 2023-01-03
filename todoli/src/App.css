@@ -11,3 +11,7 @@
 .navbar {
     background-color: lightgray;
 }
+
+.card {
+  width: 75%;
+}
