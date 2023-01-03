@@ -1,5 +1,4 @@
 import './CreateListHeader.css';
-import Button from 'react-bootstrap/Button';
 function CreateListHeader(){
 
     //implement an onclick for the button, to bring up the catergory 
@@ -9,7 +8,7 @@ function CreateListHeader(){
         <div className = "top">
             <h1>Create a new List</h1>
             <div className = "button-right"> 
-                <Button variant="primary"> Create</Button>
+                <button variant="primary"> Create</button>
             </div>
         </div>
     )
