@@ -12,7 +12,10 @@ function App() {
         <Route exact path='/' element={<CreateList />} />
         <Route path='/createlist' element={<CreateList />} />
         <Route path="/listcontent" element={<ListContent />} />
-        {/* <Route path='listcontent/grocery' element={<ListContent prop="grocery" ></ListContent>} */}
+        {/* <Route key="Grocery" exact path = "/grocery" element = {<ListContent/>}/>
+        <Route key="Chore" exact path = "/chore" element = {<ListContent/>}/>
+        <Route key="Assignment" exact path = "/assignment" element = {<ListContent/>}/>
+        <Route key="Other" exact path = "/other" element = {<ListContent/>}/> */}
     </Routes>
   </BrowserRouter>
   );
