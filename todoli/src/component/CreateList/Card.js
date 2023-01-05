@@ -1,10 +1,14 @@
 
 import Card from 'react-bootstrap/Card';
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function OurCard(props) {
   //need Card img, for thumbnail
   //write go somewhere button to route to list Content
+  const navigate = useNavigate();
+  const navigateToList = ()=>{
+    navigate('/listcontent');
+  }
 
   return (
     <Card style={{width:"18rem",border:"solid 1px black"}}>
@@ -12,8 +16,8 @@ function OurCard(props) {
         <Card.Title>{props.title}</Card.Title>
         <Card.Img variant="top" src={props.image} style={{height:"65%"}}/>
         <Card.Text>{props.text}</Card.Text>
-        <button>
-          <Link to="/listcontent" style={{color:"black",textDecoration:"none",}}>Go To List</Link>
+        <button onClick={navigateToList}>
+          Go To List
         </button>
       </Card.Body>
     </Card>
