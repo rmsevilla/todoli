@@ -11,11 +11,10 @@ function App() {
     <Routes>
         <Route exact path='/' element={<CreateList />} />
         <Route path='/createlist' element={<CreateList />} />
-        <Route path="/listcontent" element={<ListContent />} />
-        {/* <Route key="Grocery" exact path = "/grocery" element = {<ListContent/>}/>
-        <Route key="Chore" exact path = "/chore" element = {<ListContent/>}/>
-        <Route key="Assignment" exact path = "/assignment" element = {<ListContent/>}/>
-        <Route key="Other" exact path = "/other" element = {<ListContent/>}/> */}
+        <Route path="/listcontent/Grocery" element={<ListContent category = "Grocery"/>} />
+        <Route path="/listcontent/Assignment" element={<ListContent category = "Assignment"/>} />
+        <Route path="/listcontent/Chore" element={<ListContent category = "Chore"/>} />
+        <Route path="/listcontent/Other" element={<ListContent category = "Other"/>} />
     </Routes>
   </BrowserRouter>
   );

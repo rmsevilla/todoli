@@ -3,10 +3,10 @@ import './ListContent.css'
 import dataMap from './MockData'
 import OneTask from './oneTask';
 
-function ListContentDisplay(){
+function ListContentDisplay(props){
 
     //to get stuff from dataMap, need dataMap.get(Grocery)
-    const stuffArray = dataMap.get("Grocery");
+    const stuffArray = dataMap.get(props.category);
     const stuff = stuffArray.map((todo,index)=><OneTask stuff={todo} key ={index}></OneTask>); 
 
 

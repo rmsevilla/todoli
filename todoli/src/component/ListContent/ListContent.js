@@ -2,11 +2,11 @@ import ListContentFooter from "./ListContentFooter";
 import ListContentHeader from "./ListContentHeader";
 import ListContentDisplay from "./ListContentDisplay";
 
-function ListContent(){
+function ListContent(props){
     return(
         <><div>
             <ListContentHeader></ListContentHeader>
-            <ListContentDisplay></ListContentDisplay>
+            <ListContentDisplay category = {props.category}></ListContentDisplay>
         </div><ListContentFooter></ListContentFooter></>
     )
 }
