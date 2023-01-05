@@ -1,3 +1,27 @@
 td {
     min-width: 80%;
 }
+
+.btn {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline;
+}
+
+.button1 {
+    margin-right: 16px;
+}
+
+.form-check-input {
+    margin-left: 16px;
+}
+
+#outer {
+    width:100%;
+    text-align: center;
+}
+
+tr {
+    white-space: nowrap;
+}
