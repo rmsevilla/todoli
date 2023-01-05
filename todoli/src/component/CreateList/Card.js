@@ -7,7 +7,7 @@ function OurCard(props) {
   //write go somewhere button to route to list Content
 
   return (
-    <Card style={{width:"18rem",border:"solid 1px black",boxSizing:"border-box"}}>
+    <Card style={{width:"18rem",border:"solid 1px black"}}>
       <Card.Body>
         <Card.Title>{props.title}</Card.Title>
         <Card.Img variant="top" src={props.image} style={{height:"65%"}}/>
