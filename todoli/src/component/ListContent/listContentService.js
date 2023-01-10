@@ -23,6 +23,14 @@ function ContentService (props){ //props hold category
         setStuff([...stuffInCategoryArray,userInput]);
     }
 
+    const handleEditParent = () =>{
+        console.log("edit parent");
+    }
+
+    const handleDeleteParent = () =>{
+        console.log("delete parent");
+    }
+
 
     return (
         <div>
@@ -37,7 +45,8 @@ function ContentService (props){ //props hold category
                 </div>
             </h5>
                 <div className="card-body">
-                    <ListContentDisplay arr = {stuffInCategoryArray}></ListContentDisplay>
+                    <ListContentDisplay arr = {stuffInCategoryArray} 
+                    edit = {handleEditParent} delete = {handleDeleteParent} ></ListContentDisplay>
                 </div>
             </div>
         </div>

@@ -5,7 +5,8 @@ import OneTask from './oneTask';
 function ListContentDisplay(props){
 
     const stuffArray = props.arr;
-    const stuff = stuffArray.map((todo,index)=><OneTask stuff={todo} key ={index}></OneTask>); 
+    const stuff = stuffArray.map((todo,index)=><OneTask stuff={todo} key ={index} 
+                                                edit = {props.edit} delete = {props.delete}></OneTask>); 
     return (
         <table className = "table table-striped listTable">
             <thead>
