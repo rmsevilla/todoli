@@ -1,12 +1,12 @@
 import ListContentFooter from "./ListContentFooter";
 import ListContentHeader from "./ListContentHeader";
-import ListContentDisplay from "./ListContentDisplay";
+import ContentService from "./listContentService";
 
 function ListContent(props){
     return(
         <><div>
             <ListContentHeader></ListContentHeader>
-            <ListContentDisplay category = {props.category}></ListContentDisplay>
+            <ContentService category = {props.category}></ContentService>
         </div><ListContentFooter></ListContentFooter></>
     )
 }

@@ -6,10 +6,10 @@ function CreateListHeader(){
 
     return(
         <div className = "top">
-            <h1>Create a new List</h1>
-            <div className = "button-right"> 
+            <h1>Our List</h1>
+            {/* <div className = "button-right"> 
                 <button variant="primary"> Create</button>
-            </div>
+            </div> */}
         </div>
     )
 }
