@@ -1,12 +1,17 @@
 import React from 'react'
+import { useNavigate} from 'react-router-dom'
 
 const ListContentHeader = () => {
+    const navigate = useNavigate();
+    const navigateBack = () =>{
+        navigate('/createlist');
+    }
     return (
         <div>
             <header>
-                <nav class = "navbar navbar-expand-lg">
-                <div class="container-fluid">
-                    <a class="navbar-brand ms-5" href="#">ToDoLi</a>
+                <nav className = "navbar navbar-expand-lg">
+                <div className="container-fluid">
+                    <button onClick={navigateBack}>ToDoLi</button>
                 </div>
                 </nav>
             </header>
