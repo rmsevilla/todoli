@@ -2,15 +2,7 @@ import dataMap from "./MockData";
 import React, { useState } from 'react';
 import ListContentDisplay from "./ListContentDisplay";
 
-function ContentService (props){ //props hold category
-
-
-    //how do i add task or remove task
-    //just try to figure out add task for now
-    //want add task, to change stuff in category array
-
-    //maybe need a setter or getter to get enter task? 
-    //then once add task hit, add it to stuffCatArray
+function ContentService (props){
     const [stuffInCategoryArray,setStuff] = useState(dataMap.get(props.category));
     const [userInput, setInput] = useState("");
 
@@ -27,8 +19,10 @@ function ContentService (props){ //props hold category
         console.log("edit parent");
     }
 
-    const handleDeleteParent = () =>{
-        console.log("delete parent");
+    const handleDeleteParent = (e) =>{
+       setStuff(stuffInCategoryArray.filter(
+            function(stuff) {return stuff !== e.target.value}
+       ));
     }
 
 
