@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import CreateList from './component/CreateList/CreateList';
 import ListContent from './component/ListContent/ListContent';
 import { BrowserRouter, Routes, Route} from "react-router-dom";
+import NoPageFound from './component/NoPageFound/NoPageFound';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route path="/listcontent/Assignment" element={<ListContent category = "Assignment"/>} />
         <Route path="/listcontent/Chore" element={<ListContent category = "Chore"/>} />
         <Route path="/listcontent/Other" element={<ListContent category = "Other"/>} />
+        <Route path='*' element={<NoPageFound/>} />
     </Routes>
   </BrowserRouter>
   );

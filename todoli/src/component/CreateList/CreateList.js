@@ -7,8 +7,6 @@ import homework from '../../image/assignment.jpg';
 import other from '../../image/other.jpg';
 
 function CreateList(){
-    //put url for card thumbnail, and implement on click of the card
-    //that bring us to the listContent
     return(
         <div>
             <CreateListHeader></CreateListHeader>
