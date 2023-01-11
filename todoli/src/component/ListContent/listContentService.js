@@ -15,8 +15,16 @@ function ContentService (props){
         setStuff([...stuffInCategoryArray,userInput]);
     }
 
-    const handleEditParent = () =>{
-        console.log("edit parent");
+    const handleEditPopUP = ()=>{
+        //pop up a window, asking what to edit. maybe create a pop up module?
+        //in pop up module, then we call handleEditParent to actually edit
+    }
+
+    const handleEditParent = (e) =>{
+       let index = stuffInCategoryArray.indexOf(e.target.value);
+       console.log(index);
+       //index work. need input edit text box?
+       
     }
 
     const handleDeleteParent = (e) =>{
