@@ -7,7 +7,7 @@ function OurCard(props) {
   //write go somewhere button to route to list Content
   const navigate = useNavigate();
   const navigateToList = ()=>{
-    navigate('/listcontent');
+    navigate('/listcontent/'+ props.category);
   }
 
   return (
