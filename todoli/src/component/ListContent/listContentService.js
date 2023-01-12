@@ -48,7 +48,7 @@ function ContentService (props){
             </h5>
                 <div className="card-body">
                     <ListContentDisplay arr = {stuffInCategoryArray} 
-                    edit = {handleEditParent} delete = {handleDeleteParent} ></ListContentDisplay>
+                     edit = {handleEditParent} delete = {handleDeleteParent} ></ListContentDisplay>
                 </div>
             </div>
         </div>
