@@ -1,6 +1,9 @@
 import dataMap from "./MockData";
 import React, { useState } from 'react';
 import ListContentDisplay from "./ListContentDisplay";
+import { Outlet } from "react-router-dom";
+import './ListContent.css';
+
 
 function ContentService (props){
     const [stuffInCategoryArray,setStuff] = useState(dataMap.get(props.category));
@@ -15,10 +18,10 @@ function ContentService (props){
         setStuff([...stuffInCategoryArray,userInput]);
     }
 
-    const handleEditPopUP = ()=>{
-        //pop up a window, asking what to edit. maybe create a pop up module?
-        //in pop up module, then we call handleEditParent to actually edit
-    }
+    // const handleEditPopUP = ()=>{
+    //     //pop up a window, asking what to edit. maybe create a pop up module?
+    //     //in pop up module, then we call handleEditParent to actually edit
+    // }
 
     const handleEditParent = (e) =>{
        let index = stuffInCategoryArray.indexOf(e.target.value);
@@ -46,6 +49,9 @@ function ContentService (props){
                 <span><button type="button" className="btn btn-success ms-2" onClick={handleAddTask}>Add Task</button></span>
                 </div>
             </h5>
+            <div className="pad">
+                <Outlet></Outlet>
+            </div>
                 <div className="card-body">
                     <ListContentDisplay arr = {stuffInCategoryArray} 
                      edit = {handleEditParent} delete = {handleDeleteParent} ></ListContentDisplay>
