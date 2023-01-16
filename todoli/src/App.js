@@ -7,6 +7,7 @@ import NoPageFound from './component/NoPageFound/NoPageFound';
 import ListContentEdit from './component/ListContent/ListContentEdit';
 
 
+
 function App() {
   return (
     <BrowserRouter>
@@ -15,19 +16,19 @@ function App() {
         <Route path='/createlist' element={<CreateList />} />
 
         <Route path="/listcontent/Grocery" element={<ListContent category = "Grocery"/>} >
-          <Route path='edit' element = {<ListContentEdit/>}/>
+          <Route path='edit/:task' element = {<ListContentEdit/>}/>
         </Route>
 
         <Route path="/listcontent/Assignment" element={<ListContent category = "Assignment"/>} >
-          <Route path='edit' element = {<ListContentEdit/>}/>
+          <Route path='edit/:task' element = {<ListContentEdit/>}/>
         </Route> 
 
         <Route path="/listcontent/Chore" element={<ListContent category = "Chore"/>} >
-          <Route path='edit' element = {<ListContentEdit/>}/>
+          <Route path='edit/:task' element = {<ListContentEdit/>}/>
         </Route>
 
         <Route path="/listcontent/Other" element={<ListContent category = "Other"/>} >
-          <Route path='edit' element = {<ListContentEdit/>}/>
+          <Route path='edit/:task' element = {<ListContentEdit/>}/>
         </Route>
         
         <Route path='*' element={<NoPageFound/>} />

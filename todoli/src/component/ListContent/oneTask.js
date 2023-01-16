@@ -2,8 +2,10 @@ import { useNavigate } from "react-router-dom";
 
 function OneTask(props){
     const handleEdit = ()=>{
-        navigate('edit', {state:{stuff:props.stuff}});
+        navigate('edit/'+ props.stuff); //maybe pass props.stuff to the edit page
     }
+
+   
 
     const navigate = useNavigate();
 

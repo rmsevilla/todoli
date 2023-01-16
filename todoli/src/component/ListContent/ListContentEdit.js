@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import {useOutletContext,useParams } from 'react-router-dom';
 
 
 function ListContentEdit(){
@@ -9,12 +9,16 @@ function ListContentEdit(){
     // const {state} = useLocation(); //this is the edit from editparent
     // const {stuff} = state;
 
+    const edit = useOutletContext();
+
+    const {task} = useParams();
+
     const handleInputChangeEdit = (e)=>{
         setInputEdit(e.target.value);
     }
 
     const handleEdit= (e)=>{
-        // console.log(stuff);
+        edit(task,userInputEdit);
         e.preventDefault();
     }
 
