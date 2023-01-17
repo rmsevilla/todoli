@@ -1,6 +1,9 @@
 import dataMap from "./MockData";
 import React, { useState } from 'react';
 import ListContentDisplay from "./ListContentDisplay";
+import { Outlet, useNavigate } from "react-router-dom";
+import './ListContent.css';
+
 
 function ContentService (props){
     const [stuffInCategoryArray,setStuff] = useState(dataMap.get(props.category));
@@ -10,27 +13,31 @@ function ContentService (props){
         setInput(e.target.value);
     }
 
+    const navigate = useNavigate();
 
+    //this is not permanent, somehow when I leave, the task go back to normal
     const handleAddTask = () =>{
         setStuff([...stuffInCategoryArray,userInput]);
     }
 
-    const handleEditPopUP = ()=>{
-        //pop up a window, asking what to edit. maybe create a pop up module?
-        //in pop up module, then we call handleEditParent to actually edit
-    }
-
-    const handleEditParent = (e) =>{
-       let index = stuffInCategoryArray.indexOf(e.target.value);
-       console.log(index);
+    const handleEditParent = (...params) =>{
        //index work. need input edit text box?
-       
+       let indexToChange = stuffInCategoryArray.indexOf(params[0]);
+       let task = params[1];
+       if(indexToChange!== -1){
+        stuffInCategoryArray[indexToChange] = task;
+       }
+       setStuff([...stuffInCategoryArray]);
+       //navigate - 1 is to get rid of the edit,but also update the task
+       navigate(-1);
     }
 
+    //this is not permanent, somehow when I leave, the task go back to normal
     const handleDeleteParent = (e) =>{
-       setStuff(stuffInCategoryArray.filter(
-            function(stuff) {return stuff !== e.target.value}
-       ));
+        let filterArray = stuffInCategoryArray.filter(
+                function(stuff) {return stuff !== e.target.value}
+        );
+        setStuff([...filterArray]);
     }
 
 
@@ -46,9 +53,12 @@ function ContentService (props){
                 <span><button type="button" className="btn btn-success ms-2" onClick={handleAddTask}>Add Task</button></span>
                 </div>
             </h5>
+            <div className="pad">
+                <Outlet context={handleEditParent}></Outlet>
+            </div>
                 <div className="card-body">
                     <ListContentDisplay arr = {stuffInCategoryArray} 
-                     edit = {handleEditParent} delete = {handleDeleteParent} ></ListContentDisplay>
+                      delete = {handleDeleteParent} ></ListContentDisplay>
                 </div>
             </div>
         </div>
