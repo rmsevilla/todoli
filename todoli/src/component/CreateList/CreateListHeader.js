@@ -3,7 +3,7 @@ function CreateListHeader(){
 
     return(
         <div className = "top">
-            <h1>Our List</h1>
+            <h3>Our Lists</h3>
         </div>
     )
 }

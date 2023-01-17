@@ -11,12 +11,12 @@ function OurCard(props) {
   }
 
   return (
-    <Card style={{width:"18rem",border:"solid 1px black"}}>
+    <Card className= "shadow-sm mb-5 bg-body rounded" style={{width:"18rem",border:"solid 1px black", }}>
       <Card.Body>
         <Card.Title>{props.title}</Card.Title>
         <Card.Img variant="top" src={props.image} style={{height:"65%"}}/>
         <Card.Text>{props.text}</Card.Text>
-        <button onClick={navigateToList}>
+        <button className="btn btn-success btn-sm rounded-pill" onClick={navigateToList}>
           Go To List
         </button>
       </Card.Body>

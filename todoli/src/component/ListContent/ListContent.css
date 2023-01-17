@@ -17,6 +17,13 @@ td {
     margin-left: 16px;
 }
 
+#headerBtn {
+    border: none;
+    background: none;
+    font-size: 23px;
+    padding-left: 25px;
+}
+
 #outer {
     width:100%;
     text-align: center;
