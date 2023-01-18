@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 
 function OneTask(props){
     const handleEdit = ()=>{
-        navigate('edit/'+ props.stuff); //maybe pass props.stuff to the edit page
+        navigate('edit/'+ props.stuff); 
     }
 
    
@@ -10,7 +10,6 @@ function OneTask(props){
     const navigate = useNavigate();
 
     const handleDelete = props.delete;
-    //need listContent to be here for pop up to work at least
             return(
                 <tr>
                     <td> 

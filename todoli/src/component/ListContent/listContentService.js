@@ -2,11 +2,9 @@ import React, { useState,useEffect } from 'react';
 import ListContentDisplay from "./ListContentDisplay";
 import { Outlet, useNavigate } from "react-router-dom";
 import './ListContent.css';
-import dataMap from './MockData';
 
 
 function ContentService (props){
-    //const [stuffInCategoryArray,setStuff] = useState(dataMap.get(props.category));
     const [stuffInCategoryArray,setStuff] = useState(JSON.parse(window.localStorage.getItem(props.category)));
     const [userInput, setInput] = useState("");
 
@@ -16,22 +14,19 @@ function ContentService (props){
 
     const navigate = useNavigate();
 
-    //this is not permanent, somehow when I leave, the task go back to normal
     const handleAddTask = () =>{
         setStuff([...stuffInCategoryArray,userInput]);
     }
 
-
     useEffect(
-        ()=>{setStuff(JSON.parse(window.localStorage.getItem(props.category)))} ,[]
+        ()=>{setStuff(JSON.parse(window.localStorage.getItem(props.category)))} ,[props.category]
     );
 
     useEffect(
-        ()=>{window.localStorage.setItem(props.category,JSON.stringify(stuffInCategoryArray))} ,[stuffInCategoryArray]
+        ()=>{window.localStorage.setItem(props.category,JSON.stringify(stuffInCategoryArray))} ,[stuffInCategoryArray,props.category]
     );
 
     const handleEditParent = (...params) =>{
-       //index work. need input edit text box?
        let indexToChange = stuffInCategoryArray.indexOf(params[0]);
        let task = params[1];
        if(indexToChange!== -1){
@@ -42,7 +37,6 @@ function ContentService (props){
        navigate(-1);
     }
 
-    //this is not permanent, somehow when I leave, the task go back to normal
     const handleDeleteParent = (e) =>{
         let filterArray = stuffInCategoryArray.filter(
                 function(stuff) {return stuff !== e.target.value}

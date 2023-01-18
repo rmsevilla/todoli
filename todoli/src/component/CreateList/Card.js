@@ -27,6 +27,5 @@ function OurCard(props) {
   );
 }
 
-//<Route element = {<ListContent content = "grocery">}
 
 export default OurCard;
