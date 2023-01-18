@@ -1,13 +1,16 @@
 
 import Card from 'react-bootstrap/Card';
-import { useNavigate } from "react-router-dom";
+import { useNavigate} from "react-router-dom";
+import dataMap from '../ListContent/MockData';
 
 function OurCard(props) {
-  //need Card img, for thumbnail
-  //write go somewhere button to route to list Content
   const navigate = useNavigate();
+
   const navigateToList = ()=>{
     navigate('/listcontent/'+ props.category);
+    if(JSON.parse(window.localStorage.getItem(props.category))== null){
+      window.localStorage.setItem(props.category,JSON.stringify(dataMap.get(props.category)));
+    }
   }
 
   return (
@@ -24,6 +27,5 @@ function OurCard(props) {
   );
 }
 
-//<Route element = {<ListContent content = "grocery">}
 
 export default OurCard;
