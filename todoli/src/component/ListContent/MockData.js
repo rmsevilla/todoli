@@ -1,6 +1,6 @@
 const dataMap = new Map();
 
-const groceryArr = ["bread","wheat","milk"];
+const groceryArr = ["bread","wheat","milk","ceral"];
 const assignmentArr = ["math","history","english"];
 const choreArr = ["wash dishes","mop the floor"];
 const otherArr = ["take jimmy back from school","play video game"];

@@ -6,9 +6,6 @@ function ListContentEdit(){
 
     const [userInputEdit, setInputEdit] = useState("");  
     
-    // const {state} = useLocation(); //this is the edit from editparent
-    // const {stuff} = state;
-
     const edit = useOutletContext();
 
     const {task} = useParams();
