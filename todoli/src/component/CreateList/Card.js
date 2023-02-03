@@ -3,6 +3,7 @@ import Card from 'react-bootstrap/Card';
 import { useNavigate} from "react-router-dom";
 import dataMap from '../ListContent/MockData';
 
+
 function OurCard(props) {
   const navigate = useNavigate();
 
@@ -17,7 +18,7 @@ function OurCard(props) {
     <Card className= "shadow-sm mb-5 bg-body rounded" style={{width:"18rem",border:"solid 1px black", }}>
       <Card.Body>
         <Card.Title>{props.title}</Card.Title>
-        <Card.Img variant="top" src={props.image} style={{height:"65%"}}/>
+        <Card.Img variant="top" src={props.image} style={{height:"200px"}}/>
         <Card.Text>{props.text}</Card.Text>
         <button className="btn btn-success btn-sm rounded-pill" onClick={navigateToList}>
           Go To List

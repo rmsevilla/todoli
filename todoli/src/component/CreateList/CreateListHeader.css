@@ -1,10 +1,10 @@
 .top{
     border: 1px solid black;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     background-color: azure;
-    padding-left: 47%;
+    width: 100%;
 }
 
 

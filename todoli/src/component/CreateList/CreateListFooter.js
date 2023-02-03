@@ -1,4 +1,5 @@
 import React from 'react'
+import './CreateListFooter.css';
 
 const CreateListFooter = () => {
     return (
