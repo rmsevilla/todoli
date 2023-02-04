@@ -1,20 +1,68 @@
-td {
-    min-width: 80%;
+
+.card{
+    width: 90%;
 }
 
-.btn {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+
+.task-holder{
+    font-weight: 100;
+    width: 100%;
+}
+
+
+
+.task-holder > p{
     display: inline;
 }
 
-.button1 {
-    margin-right: 16px;
+td{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
-.form-check-input {
-    margin-left: 16px;
+.btn{
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.my-table{
+   width: 100%;
+   table-layout: fixed;
+
+}
+
+th{
+    height: 75px;
+}
+
+tr{
+    border: 2px solid gray;
+    height:50px;
+}
+
+
+.tree-column-1{
+    width: 30%;
+    background-color: gray;
+}
+
+.tree-column-2{
+    width: 35%;
+    background-color: gray;
+}
+
+.tree-column-3{
+    width: 35%;
+    background-color: gray;
+}
+
+.button1 {
+    float: right;
+}
+
+.button2{
+    float: right;
 }
 
 #headerBtn {
@@ -29,11 +77,32 @@ td {
     text-align: center;
 }
 
-tr {
-    white-space: nowrap;
-}
 
 .pad{
     padding-top: 2%;
     padding-bottom: 2%;
+}
+
+.footer{
+    position: fixed;
+    bottom: 0;
+}
+
+@media only screen and (max-width:850px){
+
+    .tree-column-1{
+        width: 30%;
+        background-color: gray;
+    }
+    
+    .tree-column-2{
+        width: 35%;
+        background-color: gray;
+    }
+    
+    .tree-column-3{
+        width: 35%;
+        background-color: gray;
+    }
+    
 }

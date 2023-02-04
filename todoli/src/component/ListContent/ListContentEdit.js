@@ -23,7 +23,7 @@ function ListContentEdit(){
     <div>
         <form>
         <div className="mb-3">
-            <input onChange={handleInputChangeEdit} type="text" className="form-control" maxLength="30" placeholder='Edit Here'/>
+            <input onChange={handleInputChangeEdit} type="text" className="form-control" maxLength="60" placeholder='Edit Here'/>
         </div>
             <button type="submit" className="btn btn-primary" onClick={handleEdit} style={{float:"right"}}>Edit Task</button>
         </form>

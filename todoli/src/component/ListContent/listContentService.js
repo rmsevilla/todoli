@@ -51,7 +51,7 @@ function ContentService (props){
                 <h5 className="card-header">
                     <div className="input-group mb-3">
                     <input type="text" className="form-control" placeholder="Enter Task here"
-                     aria-label="Task" aria-describedby="basic-addon1" maxLength="30"
+                     aria-label="Task" aria-describedby="basic-addon1" maxLength="60"
                      onChange={handleInputChange}></input>
                     <span><button type="button" className="btn btn-success ms-2" onClick={handleAddTask}>Add Task</button></span>
                     </div>

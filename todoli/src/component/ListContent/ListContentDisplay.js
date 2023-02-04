@@ -7,11 +7,15 @@ function ListContentDisplay(props){
     const stuffArray = props.arr;
     const stuff = stuffArray.map((todo,index)=><OneTask stuff={todo} key ={index} 
                                                 delete = {props.delete}></OneTask>); 
+
+                                        
     return (
-        <table className = "table table-striped listTable">
+        <table className = "my-table">
             <thead>
                 <tr>
-                    <th className = "text-left">Task</th>
+                    <th className="tree-column-1 ">Task</th>
+                    <th className='tree-column-2'></th>
+                    <th className='tree-column-3'></th>
                 </tr>
             </thead>
             <tbody>
