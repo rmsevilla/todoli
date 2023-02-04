@@ -7,12 +7,18 @@
 .task-holder{
     font-weight: 100;
     width: 100%;
+    margin-left: 15px;
 }
 
-
+.Task{
+    display: inline;
+    font-size: 2rem;
+    margin-left: 10px;
+}
 
 .task-holder > p{
     display: inline;
+    font-size: 1rem;
 }
 
 td{
@@ -30,6 +36,10 @@ td{
    width: 100%;
    table-layout: fixed;
 
+}
+
+tr:nth-child(even){
+    background-color: gainsboro;
 }
 
 th{
@@ -88,7 +98,7 @@ tr{
     bottom: 0;
 }
 
-@media only screen and (max-width:850px){
+/* @media only screen and (max-width:850px){
 
     .tree-column-1{
         width: 30%;
@@ -105,4 +115,4 @@ tr{
         background-color: gray;
     }
     
-}
+} */

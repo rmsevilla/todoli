@@ -13,7 +13,7 @@ function ListContentDisplay(props){
         <table className = "my-table">
             <thead>
                 <tr>
-                    <th className="tree-column-1 ">Task</th>
+                    <th className="tree-column-1 "><p className='Task'>Task</p></th>
                     <th className='tree-column-2'></th>
                     <th className='tree-column-3'></th>
                 </tr>
