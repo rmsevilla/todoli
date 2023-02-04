@@ -73,6 +73,7 @@ tr{
 
 .button2{
     float: right;
+    margin-right: 10px;
 }
 
 #headerBtn {
