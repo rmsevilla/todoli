@@ -29,12 +29,17 @@ function ContentService (props){
     const handleEditParent = (...params) =>{
        let indexToChange = stuffInCategoryArray.indexOf(params[0]);
        let task = params[1];
-       if(indexToChange!== -1){
-        stuffInCategoryArray[indexToChange] = task;
+       if(task===""){
+        alert("Please do not enter empty task");
        }
-       setStuff([...stuffInCategoryArray]);
-       //navigate - 1 is to get rid of the edit,but also update the task
-       navigate(-1);
+       else{
+        if(indexToChange!== -1){
+            stuffInCategoryArray[indexToChange] = task;
+           }
+           setStuff([...stuffInCategoryArray]);
+           //navigate - 1 is to get rid of the edit,but also update the task
+           navigate(-1);
+       }
     }
 
     const handleDeleteParent = (e) =>{
