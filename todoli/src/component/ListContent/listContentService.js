@@ -15,7 +15,12 @@ function ContentService (props){
     const navigate = useNavigate();
 
     const handleAddTask = () =>{
-        setStuff([...stuffInCategoryArray,userInput]);
+        if(userInput===""){
+            alert("Please do not add empty task");
+        }
+        else{
+            setStuff([...stuffInCategoryArray,userInput]);
+        }
     }
 
     useEffect(
