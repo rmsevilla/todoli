@@ -15,7 +15,12 @@ function ContentService (props){
     const navigate = useNavigate();
 
     const handleAddTask = () =>{
-        setStuff([...stuffInCategoryArray,userInput]);
+        if(userInput===""){
+            alert("Please do not add empty task");
+        }
+        else{
+            setStuff([...stuffInCategoryArray,userInput]);
+        }
     }
 
     useEffect(
@@ -29,12 +34,17 @@ function ContentService (props){
     const handleEditParent = (...params) =>{
        let indexToChange = stuffInCategoryArray.indexOf(params[0]);
        let task = params[1];
-       if(indexToChange!== -1){
-        stuffInCategoryArray[indexToChange] = task;
+       if(task===""){
+        alert("Please do not enter empty task");
        }
-       setStuff([...stuffInCategoryArray]);
-       //navigate - 1 is to get rid of the edit,but also update the task
-       navigate(-1);
+       else{
+        if(indexToChange!== -1){
+            stuffInCategoryArray[indexToChange] = task;
+           }
+           setStuff([...stuffInCategoryArray]);
+           //navigate - 1 is to get rid of the edit,but also update the task
+           navigate(-1);
+       }
     }
 
     const handleDeleteParent = (e) =>{
@@ -51,7 +61,7 @@ function ContentService (props){
                 <h5 className="card-header">
                     <div className="input-group mb-3">
                     <input type="text" className="form-control" placeholder="Enter Task here"
-                     aria-label="Task" aria-describedby="basic-addon1" maxLength="30"
+                     aria-label="Task" aria-describedby="basic-addon1" maxLength="60"
                      onChange={handleInputChange}></input>
                     <span><button type="button" className="btn btn-success ms-2" onClick={handleAddTask}>Add Task</button></span>
                     </div>
